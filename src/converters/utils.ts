@@ -83,10 +83,13 @@ export const preprocessToPx = (value) => {
 }
 
 export const getFrameFromNode = (node: SceneNode) => {
-    let parent
-    while (node.parent) {
+    let parent: SceneNode | null = node
+
+    while (parent) {
+        if (parent.type === 'FRAME') break
+        // @ts-expect-error parent types may be incorrect?
         parent = node.parent
-        if (node.parent.type === 'FRAME') break
     }
+
     return parent
 }
