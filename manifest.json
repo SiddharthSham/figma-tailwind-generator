@@ -1,0 +1,36 @@
+{
+  "name": "tailwind-generator",
+  "id": "1402627488603625889",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "ui": "dist/index.html",
+  "enableProposedApi": false,
+  "documentAccess": "dynamic-page",
+  "permissions": [
+    "teamlibrary"
+  ],
+  "editorType": [
+    "dev"
+  ],
+  "capabilities": [
+    "codegen"
+  ],
+  "codegenLanguages": [
+    {
+      "label": "Tailwind",
+      "value": "tailwind"
+    }
+  ],
+  "parameters": [
+    {
+      "name": "Config",
+      "key": "config",
+      "allowFreeform": true
+    }
+  ],
+  "networkAccess": {
+    "allowedDomains": [
+      "none"
+    ]
+  }
+}

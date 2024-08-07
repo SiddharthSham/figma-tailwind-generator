@@ -1,0 +1,27 @@
+{
+  "name": "tailwind-generator",
+  "version": "1.0.0",
+  "description": "tailwind-generator",
+  "author": "Siddharth S.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "esbuild src/code.ts --watch --bundle --outfile=dist/code.js --sourcemap --target=es6 --format=esm",
+    "build": "pnpm run build:plugin && pnpm run build:tw",
+    "build:plugin": "esbuild src/code.ts --bundle --outfile=dist/code.js --format=esm --target=es6 --minify",
+    "build:tw": "node src/config/generate-theme.js",
+    "postinstall": "pnpm run build:tw",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@numbered/tailwind-fluid-layout-system": "^0.3.1",
+    "tailwindcss": "3.4.4"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.50.0",
+    "@types/node": "^22.1.0",
+    "esbuild": "^0.23.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  }
+}
