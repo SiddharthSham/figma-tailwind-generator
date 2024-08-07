@@ -11,6 +11,15 @@ importers:
       '@numbered/tailwind-fluid-layout-system':
         specifier: ^0.3.1
         version: 0.3.1(tailwindcss@3.4.4)
+      css-to-tailwind-translator:
+        specifier: ^1.2.8
+        version: 1.2.8
+      css-to-tailwindcss:
+        specifier: ^1.0.5
+        version: 1.0.5
+      json-to-css:
+        specifier: ^0.1.0
+        version: 0.1.0
       tailwindcss:
         specifier: 3.4.4
         version: 3.4.4
@@ -285,6 +294,9 @@ packages:
   color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
 
+  colord@2.9.3:
+    resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
+
   commander@4.1.1:
     resolution: {integrity: sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==}
     engines: {node: '>= 6'}
@@ -292,6 +304,17 @@ packages:
   cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
     engines: {node: '>= 8'}
+
+  css-to-tailwind-translator@1.2.8:
+    resolution: {integrity: sha512-4hGXc4En6aVHlQdGZuSL9IS4rmLUJ3rKFnkx9u03/SW6jbEjgrV/l3u7cc36nv43zEu7NDGLpJgAsX4K/9HhrQ==}
+
+  css-to-tailwindcss@1.0.5:
+    resolution: {integrity: sha512-at47sdqOBP7kljX9dnCwNdZvIMm+XdMNR9/gYiNnZN6uMfsqRoq3bO1HpdAnSn53QklaHqTWv1b+2yWE9Fa0Yw==}
+    engines: {node: '>=12.0'}
+
+  css-what@6.1.0:
+    resolution: {integrity: sha512-HTUrgRJ7r4dsZKU6GjmpfRK1O76h97Z8MfS1G0FozR+oF2kG6Vfe8JE6zwrkbxigziPHinCJ+gCPjA9EaBDtRw==}
+    engines: {node: '>= 6'}
 
   cssesc@3.0.0:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
@@ -390,6 +413,9 @@ packages:
   jiti@1.21.6:
     resolution: {integrity: sha512-2yTgeWTWzMWkHu6Jp9NKgePDaYHbntiwvYuuJLbbN9vl7DC9DvXKOB2BC3ZZ92D3cvV/aflH0osDfwpHepQ53w==}
     hasBin: true
+
+  json-to-css@0.1.0:
+    resolution: {integrity: sha512-0A6Xooey9slodt9MX7wWRVNo5G7fujVlBkdyhjNPg3GzoJW7j5EBD/Duw3zK3V132Ma/HTEnBRchl1PmOWiZgg==}
 
   lilconfig@2.1.0:
     resolution: {integrity: sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==}
@@ -508,6 +534,12 @@ packages:
     engines: {node: '>=12.0'}
     peerDependencies:
       postcss: ^8.2.14
+
+  postcss-safe-parser@6.0.0:
+    resolution: {integrity: sha512-FARHN8pwH+WiS2OPCxJI8FuRJpTVnn6ZNFiqAM2aeW2LwTHWWmWgIyKC6cUo0L8aeKiF/14MNvnpls6R2PBeMQ==}
+    engines: {node: '>=12.0'}
+    peerDependencies:
+      postcss: ^8.3.3
 
   postcss-selector-parser@6.1.1:
     resolution: {integrity: sha512-b4dlw/9V8A71rLIDsSwVmak9z2DuBUB7CA1/wSdelNEzqsjoSPeADTWNO09lpH49Diy3/JIZ2bSPB1dI3LJCHg==}
@@ -816,6 +848,8 @@ snapshots:
 
   color-name@1.1.4: {}
 
+  colord@2.9.3: {}
+
   commander@4.1.1: {}
 
   cross-spawn@7.0.3:
@@ -823,6 +857,20 @@ snapshots:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
+
+  css-to-tailwind-translator@1.2.8: {}
+
+  css-to-tailwindcss@1.0.5:
+    dependencies:
+      colord: 2.9.3
+      css-what: 6.1.0
+      postcss: 8.4.41
+      postcss-safe-parser: 6.0.0(postcss@8.4.41)
+      tailwindcss: 3.4.4
+    transitivePeerDependencies:
+      - ts-node
+
+  css-what@6.1.0: {}
 
   cssesc@3.0.0: {}
 
@@ -938,6 +986,8 @@ snapshots:
 
   jiti@1.21.6: {}
 
+  json-to-css@0.1.0: {}
+
   lilconfig@2.1.0: {}
 
   lilconfig@3.1.2: {}
@@ -1021,6 +1071,10 @@ snapshots:
     dependencies:
       postcss: 8.4.41
       postcss-selector-parser: 6.1.1
+
+  postcss-safe-parser@6.0.0(postcss@8.4.41):
+    dependencies:
+      postcss: 8.4.41
 
   postcss-selector-parser@6.1.1:
     dependencies:

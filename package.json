@@ -15,6 +15,9 @@
   },
   "dependencies": {
     "@numbered/tailwind-fluid-layout-system": "^0.3.1",
+    "css-to-tailwind-translator": "^1.2.8",
+    "css-to-tailwindcss": "^1.0.5",
+    "json-to-css": "^0.1.0",
     "tailwindcss": "3.4.4"
   },
   "devDependencies": {

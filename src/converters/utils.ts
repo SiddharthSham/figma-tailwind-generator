@@ -83,12 +83,19 @@ export const preprocessToPx = (value) => {
 }
 
 export const getFrameFromNode = (node: SceneNode) => {
+    const maxDepth = 50
+    let currentDepth = 0
     let parent: SceneNode | null = node
 
     while (parent) {
         if (parent.type === 'FRAME') break
+        if (currentDepth >= maxDepth) {
+            parent = null
+            break
+        }
         // @ts-expect-error parent types may be incorrect?
         parent = node.parent
+        currentDepth += 1
     }
 
     return parent

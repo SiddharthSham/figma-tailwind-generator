@@ -8,7 +8,10 @@ export const fontSizeConverter: Converter = (value) => {
     return matchOnProp('text', 'fontSize', val)
 }
 
-export const fontWeightConverter: Converter = (value) => matchOnValue('font', 'fontWeight', value)
+export const fontWeightConverter: Converter = (value) => {
+    if (parseInt(`${value}`) === 400) return ''
+    return matchOnValue('font', 'fontWeight', value)
+}
 
 export const textColorConverter: Converter = (value) => {
     const hexcode = value.match(/[a-f0-9]{6}/gi)?.[0]

@@ -1,3 +1,6 @@
+// import { TailwindConverter } from "css-to-tailwindcss";
+// import { CssToTailwindTranslator } from "css-to-tailwind-translator";
+// const Css = require('json-to-css')
 import { converters, postprocess } from "./converters";
 
 const supportedProps = Object.keys(converters);
@@ -32,3 +35,27 @@ export const convert = async (rules: Record<string, string>, ctx) => {
 
     return transformed;
 };
+
+// export const convert = async (rules, ctx) => {
+//     const theme = await getThemeConfig()
+//     const css = Css.of({ twg: rules })
+//     const conversionResult = CssToTailwindTranslator(css, { customTheme: theme });
+//     console.log({ css, conversionResult })
+//     return conversionResult.data?.[0]?.resultVal || ''
+// }
+
+// export const convert = async (rules, ctx) => {
+//     const theme = await getThemeConfig()
+//     const css = Css.of({ twg: Object.entries(rules).map(([key, value]) => ({ [key]: isVariable(value as string) || value })) })
+//     const converter = new TailwindConverter({
+//         remInPx: 16,
+//         tailwindConfig: {
+//             content: [],
+//             theme: theme,
+//         },
+//     });
+
+//     const converted = await converter.convertCSS(css)
+//     console.log(converted.nodes[0]?.tailwindClasses.join(' '))
+//     return converted.nodes[0]?.tailwindClasses.join(' ') || ''
+// }
